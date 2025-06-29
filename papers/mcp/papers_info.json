@@ -1,0 +1,44 @@
+{
+  "2504.08999v1": {
+    "title": "MCP Bridge: A Lightweight, LLM-Agnostic RESTful Proxy for Model Context Protocol Servers",
+    "authors": [
+      "Arash Ahmadi",
+      "Sarah Sharif",
+      "Yaser M. Banad"
+    ],
+    "summary": "Large Language Models (LLMs) are increasingly augmented with external tools\nthrough standardized interfaces like the Model Context Protocol (MCP). However,\ncurrent MCP implementations face critical limitations: they typically require\nlocal process execution through STDIO transports, making them impractical for\nresource-constrained environments like mobile devices, web browsers, and edge\ncomputing. We present MCP Bridge, a lightweight RESTful proxy that connects to\nmultiple MCP servers and exposes their capabilities through a unified API.\nUnlike existing solutions, MCP Bridge is fully LLM-agnostic, supporting any\nbackend regardless of vendor. The system implements a risk-based execution\nmodel with three security levels standard execution, confirmation workflow, and\nDocker isolation while maintaining backward compatibility with standard MCP\nclients. Complementing this server-side infrastructure is a Python based MCP\nGemini Agent that facilitates natural language interaction with MCP tools. The\nevaluation demonstrates that MCP Bridge successfully addresses the constraints\nof direct MCP connections while providing enhanced security controls and\ncross-platform compatibility, enabling sophisticated LLM-powered applications\nin previously inaccessible environments",
+    "pdf_url": "http://arxiv.org/pdf/2504.08999v1",
+    "published": "2025-04-11"
+  },
+  "1711.03897v2": {
+    "title": "High collection efficiency MCPs for photon counting detectors",
+    "authors": [
+      "D. A. Orlov",
+      "T. Ruardij",
+      "S. Duarte Pinto",
+      "R. Glazenborg",
+      "E. Kernen"
+    ],
+    "summary": "Multi Micro-Channel-Plate Photomultiplier tubes (MCP-PMT) with High\nCollection Efficiency (Hi-CE) MCPs are developed and characterised. With these\nHi-CE MCPs more than 90% of photoelectrons emitted from the photocathode can be\ndetected; this is in contrast to conventional MCPs where about 50% of\nphotoelectrons are lost at the MCP stage. The drawback of the Hi-CE MCPs is a\nsmall degradation of the transfer time spread (TTS). However for applications\nwhere no sub-ns time resolution is required the implementation of Hi-CE MCPs is\nextremely beneficial, as it improves the detection efficiency of the MCP-PMT\nalmost by a factor of two.",
+    "pdf_url": "http://arxiv.org/pdf/1711.03897v2",
+    "published": "2017-11-10"
+  },
+  "1808.07824v1": {
+    "title": "Characteristics of fast timing MCP-PMTs in magnetic fields",
+    "authors": [
+      "Mohammad Hattawy",
+      "Junqi Xie",
+      "Mickey Chiu",
+      "Marcel Demarteau",
+      "Kawtar Hafidi",
+      "Edward May",
+      "Jose Repond",
+      "Robert Wagner",
+      "Lei Xia",
+      "Carl Zorn"
+    ],
+    "summary": "The motivation of this paper is to explore the parameters that affect the\nperformance of Microchannel Plate Photomultiplier Tubes (MCP-PMTs) in magnetic\nfields with the goal to guide their design to achieve a high magnetic field\ntolerance. MCP-PMTs based on two different designs were tested.The magnetic\nfield tolerance of MCP-PMT based on a design providing independently biased\nvoltages showed a significant improvement (up to 0.7 T) compared to the one\nutilizing an internal resistor chain design (up to 0.1 T), indicating the\nimportance of individually adjustable voltages. The effects of the rotation\nangle of the MCP-PMT relative to the magnetic field direction and of the bias\nvoltage between the photocathode and the top MCP were extensively investigated\nusing the MCP-PMT based on the independently biased voltage design. It was\nfound that the signal amplitude of the MCP-PMT exhibits an enhanced performance\nat a tilt angle of $\\pm$8$^{\\circ}$, due to the 8$^{\\circ}$ bias angle of the\nMCP pores. The maximum signal amplitude was observed at different bias voltages\ndepending on the magnetic field strength.",
+    "pdf_url": "http://arxiv.org/pdf/1808.07824v1",
+    "published": "2018-08-23"
+  }
+}
