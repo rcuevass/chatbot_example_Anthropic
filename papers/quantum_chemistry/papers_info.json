@@ -1,0 +1,58 @@
+{
+  "2011.01544v1": {
+    "title": "Post-Hartree-Fock method in Quantum Chemistry for Quantum Computer",
+    "authors": [
+      "Yutaka Shikano",
+      "Hiroshi C. Watanabe",
+      "Ken M. Nakanishi",
+      "Yu-ya Ohnishi"
+    ],
+    "summary": "Quantum computational chemistry is a potential application of quantum\ncomputers that is expected to effectively solve several quantum-chemistry\nproblems, particularly the electronic structure problem. Quantum computational\nchemistry can be compared to the conventional computational devices. This\nreview comprehensively investigates the applications and overview of quantum\ncomputational chemistry, including a review of the Hartree-Fock method for\nquantum information scientists. Quantum algorithms, quantum phase estimation,\nand variational quantum eigensolver, have been applied to the post-Hartree-Fock\nmethod.",
+    "pdf_url": "http://arxiv.org/pdf/2011.01544v1",
+    "published": "2020-11-03"
+  },
+  "2208.10978v1": {
+    "title": "Q$^2$Chemistry: A quantum computation platform for quantum chemistry",
+    "authors": [
+      "Yi Fan",
+      "Jie Liu",
+      "Xiongzhi Zeng",
+      "Zhiqian Xu",
+      "Honghui Shang",
+      "Zhenyu Li",
+      "Jinlong Yang"
+    ],
+    "summary": "Quantum computer provides new opportunities for quantum chemistry. In this\narticle, we present a versatile, extensible, and efficient software package,\nnamed Q$^2$Chemistry, for developing quantum algorithms and quantum inspired\nclassical algorithms in the field of quantum chemistry. In Q$^2$Chemistry, wave\nfunction and Hamiltonian can be conveniently mapped into the qubit space, then\nquantum circuits can be generated according to a specific quantum algorithm\nalready implemented in the package or newly developed by the users. The\ngenerated circuits can be dispatched to either a physical quantum computer, if\navailable, or to the internal virtual quantum computer realized by simulating\nquantum circuit on classical supercomputers. As demonstrated by our benchmark\nsimulations with up to 72 qubit, Q$^2$Chemistry achieves excellent performance\nin simulating medium scale quantum circuits. Application of Q$^2$Chemistry to\nsimulate molecules and periodic systems are given with performance analysis.",
+    "pdf_url": "http://arxiv.org/pdf/2208.10978v1",
+    "published": "2022-08-23"
+  },
+  "2407.11235v1": {
+    "title": "Quantum chemistry, classical heuristics, and quantum advantage",
+    "authors": [
+      "Garnet Kin-Lic Chan"
+    ],
+    "summary": "We describe the problems of quantum chemistry, the intuition behind classical\nheuristic methods used to solve them, a conjectured form of the classical\ncomplexity of quantum chemistry problems, and the subsequent opportunities for\nquantum advantage. This article is written for both quantum chemists and\nquantum information theorists. In particular, we attempt to summarize the\ndomain of quantum chemistry problems as well as the chemical intuition that is\napplied to solve them within concrete statements (such as a classical heuristic\ncost conjecture and a classification of different avenues for quantum\nadvantage) in the hope that this may stimulate future analysis.",
+    "pdf_url": "http://arxiv.org/pdf/2407.11235v1",
+    "published": "2024-07-15"
+  },
+  "1208.5524v1": {
+    "title": "Back to the Future: A roadmap for quantum simulation from vintage quantum chemistry",
+    "authors": [
+      "Peter J. Love"
+    ],
+    "summary": "A discussion of the prospects for quantum computation for quantum chemistry\nfrom the point of view of the history of classical calculations of electronic\nstructure.",
+    "pdf_url": "http://arxiv.org/pdf/1208.5524v1",
+    "published": "2012-08-27"
+  },
+  "1811.05256v2": {
+    "title": "Solving Quantum Chemistry Problems with a D-Wave Quantum Annealer",
+    "authors": [
+      "Michael Streif",
+      "Florian Neukart",
+      "Martin Leib"
+    ],
+    "summary": "Quantum annealing devices have been subject to various analyses in order to\nclassify their usefulness for practical applications. While it has been\nsuccessfully proven that such systems can in general be used for solving\ncombinatorial optimization problems, they have not been used to solve chemistry\napplications. In this paper we apply a mapping, put forward by Xia et al. (The\nJournal of Physical Chemistry B 122.13 (2017): 3384-3395.), from a quantum\nchemistry Hamiltonian to an Ising spin glass formulation and find the ground\nstate energy with a quantum annealer. Additionally we investigate the scaling\nin terms of needed physical qubits on a quantum annealer with limited\nconnectivity. To the best of our knowledge, this is the first experimental\nstudy of quantum chemistry problems on quantum annealing devices. We find that\ncurrent quantum annealing technologies result in an exponential scaling for\nsuch inherently quantum problems and that new couplers are necessary to make\nquantum annealers attractive for quantum chemistry.",
+    "pdf_url": "http://arxiv.org/pdf/1811.05256v2",
+    "published": "2018-11-13"
+  }
+}

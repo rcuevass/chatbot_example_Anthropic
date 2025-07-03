@@ -1,0 +1,64 @@
+{
+  "2408.13006v2": {
+    "title": "Systematic Evaluation of LLM-as-a-Judge in LLM Alignment Tasks: Explainable Metrics and Diverse Prompt Templates",
+    "authors": [
+      "Hui Wei",
+      "Shenghua He",
+      "Tian Xia",
+      "Fei Liu",
+      "Andy Wong",
+      "Jingyang Lin",
+      "Mei Han"
+    ],
+    "summary": "LLM-as-a-Judge has been widely applied to evaluate and compare different LLM\nalignmnet approaches (e.g., RLHF and DPO). However, concerns regarding its\nreliability have emerged, due to LLM judges' biases and inconsistent\ndecision-making. Previous research has developed evaluation frameworks to\nassess reliability of LLM judges and their alignment with human preferences.\nHowever, the employed evaluation metrics often lack adequate explainability and\nfail to address LLM internal inconsistency. Additionally, existing studies\ninadequately explore the impact of various prompt templates when applying\nLLM-as-a-Judge methods, leading to potentially inconsistent comparisons between\ndifferent alignment algorithms. In this work, we systematically evaluate\nLLM-as-a-Judge on alignment tasks by defining more theoretically interpretable\nevaluation metrics and explicitly mitigating LLM internal inconsistency from\nreliability metrics. We develop an open-source framework to evaluate, compare,\nand visualize the reliability and alignment of LLM judges, which facilitates\npractitioners to choose LLM judges for alignment tasks. In the experiments, we\nexamine effects of diverse prompt templates on LLM-judge reliability and also\ndemonstrate our developed framework by comparing various LLM judges on two\ncommon alignment datasets (i.e., TL;DR Summarization and HH-RLHF-Helpfulness).\nOur results indicate a significant impact of prompt templates on LLM judge\nperformance, as well as a mediocre alignment level between the tested LLM\njudges and human evaluators.",
+    "pdf_url": "http://arxiv.org/pdf/2408.13006v2",
+    "published": "2024-08-23"
+  },
+  "2405.06064v1": {
+    "title": "LLMs for XAI: Future Directions for Explaining Explanations",
+    "authors": [
+      "Alexandra Zytek",
+      "Sara Pidò",
+      "Kalyan Veeramachaneni"
+    ],
+    "summary": "In response to the demand for Explainable Artificial Intelligence (XAI), we\ninvestigate the use of Large Language Models (LLMs) to transform ML\nexplanations into natural, human-readable narratives. Rather than directly\nexplaining ML models using LLMs, we focus on refining explanations computed\nusing existing XAI algorithms. We outline several research directions,\nincluding defining evaluation metrics, prompt design, comparing LLM models,\nexploring further training methods, and integrating external data. Initial\nexperiments and user study suggest that LLMs offer a promising way to enhance\nthe interpretability and usability of XAI.",
+    "pdf_url": "http://arxiv.org/pdf/2405.06064v1",
+    "published": "2024-05-09"
+  },
+  "2402.08030v1": {
+    "title": "Why and When LLM-Based Assistants Can Go Wrong: Investigating the Effectiveness of Prompt-Based Interactions for Software Help-Seeking",
+    "authors": [
+      "Anjali Khurana",
+      "Hari Subramonyam",
+      "Parmit K Chilana"
+    ],
+    "summary": "Large Language Model (LLM) assistants, such as ChatGPT, have emerged as\npotential alternatives to search methods for helping users navigate complex,\nfeature-rich software. LLMs use vast training data from domain-specific texts,\nsoftware manuals, and code repositories to mimic human-like interactions,\noffering tailored assistance, including step-by-step instructions. In this\nwork, we investigated LLM-generated software guidance through a within-subject\nexperiment with 16 participants and follow-up interviews. We compared a\nbaseline LLM assistant with an LLM optimized for particular software contexts,\nSoftAIBot, which also offered guidelines for constructing appropriate prompts.\nWe assessed task completion, perceived accuracy, relevance, and trust.\nSurprisingly, although SoftAIBot outperformed the baseline LLM, our results\nrevealed no significant difference in LLM usage and user perceptions with or\nwithout prompt guidelines and the integration of domain context. Most users\nstruggled to understand how the prompt's text related to the LLM's responses\nand often followed the LLM's suggestions verbatim, even if they were incorrect.\nThis resulted in difficulties when using the LLM's advice for software tasks,\nleading to low task completion rates. Our detailed analysis also revealed that\nusers remained unaware of inaccuracies in the LLM's responses, indicating a gap\nbetween their lack of software expertise and their ability to evaluate the\nLLM's assistance. With the growing push for designing domain-specific LLM\nassistants, we emphasize the importance of incorporating explainable,\ncontext-aware cues into LLMs to help users understand prompt-based\ninteractions, identify biases, and maximize the utility of LLM assistants.",
+    "pdf_url": "http://arxiv.org/pdf/2402.08030v1",
+    "published": "2024-02-12"
+  },
+  "2506.21812v1": {
+    "title": "Towards Transparent AI: A Survey on Explainable Large Language Models",
+    "authors": [
+      "Avash Palikhe",
+      "Zhenyu Yu",
+      "Zichong Wang",
+      "Wenbin Zhang"
+    ],
+    "summary": "Large Language Models (LLMs) have played a pivotal role in advancing\nArtificial Intelligence (AI). However, despite their achievements, LLMs often\nstruggle to explain their decision-making processes, making them a 'black box'\nand presenting a substantial challenge to explainability. This lack of\ntransparency poses a significant obstacle to the adoption of LLMs in\nhigh-stakes domain applications, where interpretability is particularly\nessential. To overcome these limitations, researchers have developed various\nexplainable artificial intelligence (XAI) methods that provide\nhuman-interpretable explanations for LLMs. However, a systematic understanding\nof these methods remains limited. To address this gap, this survey provides a\ncomprehensive review of explainability techniques by categorizing XAI methods\nbased on the underlying transformer architectures of LLMs: encoder-only,\ndecoder-only, and encoder-decoder models. Then these techniques are examined in\nterms of their evaluation for assessing explainability, and the survey further\nexplores how these explanations are leveraged in practical applications.\nFinally, it discusses available resources, ongoing research challenges, and\nfuture directions, aiming to guide continued efforts toward developing\ntransparent and responsible LLMs.",
+    "pdf_url": "http://arxiv.org/pdf/2506.21812v1",
+    "published": "2025-06-26"
+  },
+  "2310.05797v4": {
+    "title": "In-Context Explainers: Harnessing LLMs for Explaining Black Box Models",
+    "authors": [
+      "Nicholas Kroeger",
+      "Dan Ley",
+      "Satyapriya Krishna",
+      "Chirag Agarwal",
+      "Himabindu Lakkaraju"
+    ],
+    "summary": "Recent advancements in Large Language Models (LLMs) have demonstrated\nexceptional capabilities in complex tasks like machine translation, commonsense\nreasoning, and language understanding. One of the primary reasons for the\nadaptability of LLMs in such diverse tasks is their in-context learning (ICL)\ncapability, which allows them to perform well on new tasks by simply using a\nfew task samples in the prompt. Despite their effectiveness in enhancing the\nperformance of LLMs on diverse language and tabular tasks, these methods have\nnot been thoroughly explored for their potential to generate post hoc\nexplanations. In this work, we carry out one of the first explorations to\nanalyze the effectiveness of LLMs in explaining other complex predictive models\nusing ICL. To this end, we propose a novel framework, In-Context Explainers,\ncomprising of three novel approaches that exploit the ICL capabilities of LLMs\nto explain the predictions made by other predictive models. We conduct\nextensive analysis with these approaches on real-world tabular and text\ndatasets and demonstrate that LLMs are capable of explaining other predictive\nmodels similar to state-of-the-art post hoc explainers, opening up promising\navenues for future research into LLM-based post hoc explanations of complex\npredictive models.",
+    "pdf_url": "http://arxiv.org/pdf/2310.05797v4",
+    "published": "2023-10-09"
+  }
+}

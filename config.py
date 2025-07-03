@@ -19,8 +19,25 @@ class Config:
         self.max_tokens = int(os.getenv("MAX_TOKENS", "2048"))
         self.log_level = os.getenv("LOG_LEVEL", "INFO")
         
+        # Audit logging configuration
+        self.enable_audit_logging = os.getenv("ENABLE_AUDIT_LOGGING", "true").lower() == "true"
+        self.audit_log_dir = Path(os.getenv("AUDIT_LOG_DIR", "logs/audit"))
+        self.audit_log_retention_days = int(os.getenv("AUDIT_LOG_RETENTION_DAYS", "90"))
+        self.log_user_queries = os.getenv("LOG_USER_QUERIES", "true").lower() == "true"
+        self.log_api_calls = os.getenv("LOG_API_CALLS", "true").lower() == "true"
+        self.log_tool_executions = os.getenv("LOG_TOOL_EXECUTIONS", "true").lower() == "true"
+        self.log_errors = os.getenv("LOG_ERRORS", "true").lower() == "true"
+        
+        # Privacy settings for audit logs
+        self.hash_sensitive_data = os.getenv("HASH_SENSITIVE_DATA", "true").lower() == "true"
+        self.mask_api_keys = os.getenv("MASK_API_KEYS", "true").lower() == "true"
+        
         # Create paper directory if it doesn't exist
         self.paper_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Create audit log directory if audit logging is enabled
+        if self.enable_audit_logging:
+            self.audit_log_dir.mkdir(parents=True, exist_ok=True)
         
         # Validate configuration
         self._validate_config()
@@ -39,11 +56,28 @@ class Config:
         
         if self.log_level not in ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]:
             raise ValueError("LOG_LEVEL must be one of: DEBUG, INFO, WARNING, ERROR, CRITICAL")
+        
+        if self.audit_log_retention_days <= 0:
+            raise ValueError("AUDIT_LOG_RETENTION_DAYS must be a positive integer")
     
     def get_topic_dir(self, topic: str) -> Path:
         """Get the directory path for a specific topic."""
         topic_name = topic.lower().replace(" ", "_").replace("/", "_")
         return self.paper_dir / topic_name
+    
+    def get_audit_config_summary(self) -> dict:
+        """Get a summary of audit logging configuration."""
+        return {
+            "enabled": self.enable_audit_logging,
+            "log_directory": str(self.audit_log_dir),
+            "retention_days": self.audit_log_retention_days,
+            "log_user_queries": self.log_user_queries,
+            "log_api_calls": self.log_api_calls,
+            "log_tool_executions": self.log_tool_executions,
+            "log_errors": self.log_errors,
+            "hash_sensitive_data": self.hash_sensitive_data,
+            "mask_api_keys": self.mask_api_keys
+        }
 
 # Global configuration instance
 config = Config()

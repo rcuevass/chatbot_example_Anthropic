@@ -2,10 +2,12 @@
 
 import anthropic
 import logging
-from typing import List, Dict, Any, Optional
+import time
+from typing import List, Dict, Any, Optional, Union
 
 from config import config
 from utils.logger import setup_logger
+from utils.audit_logger import get_audit_logger, cleanup_audit_logger
 from core.tool_executor import ToolExecutor, ToolExecutorError
 
 logger = setup_logger(__name__, config.log_level)
@@ -26,18 +28,32 @@ class ArxivChatbot:
         try:
             self.client = anthropic.Anthropic(api_key=config.anthropic_api_key)
             self.tool_executor = ToolExecutor()
+            
+            # Initialize audit logger if enabled
+            self.audit_logger = None
+            if config.enable_audit_logging:
+                self.audit_logger = get_audit_logger(config.audit_log_dir)
+                logger.info("Audit logging enabled")
+                logger.info(f"Audit config: {config.get_audit_config_summary()}")
+            
             logger.info("ArXiv Chatbot initialized successfully")
         except Exception as e:
             error_msg = f"Failed to initialize chatbot: {str(e)}"
             logger.error(error_msg)
+            
+            # Log initialization error to audit log
+            if self.audit_logger:
+                self.audit_logger.log_error("chatbot", "initialization", error_msg)
+            
             raise ChatbotError(error_msg) from e
     
-    def process_query(self, query: str) -> None:
+    def process_query(self, query: str, user_id: Optional[str] = None) -> None:
         """
         Process a single user query and print the response.
         
         Args:
             query: User's question or request
+            user_id: Optional user identifier for audit tracking
             
         Raises:
             APIError: If API calls fail
@@ -49,8 +65,13 @@ class ArxivChatbot:
         
         logger.info(f"Processing query: {query[:100]}...")
         
+        # Log user query for audit
+        query_event_id = None
+        if self.audit_logger and config.log_user_queries:
+            query_event_id = self.audit_logger.log_user_query(query, user_id)
+        
         try:
-            messages = [{'role': 'user', 'content': query}]
+            messages = [{"role": "user", "content": query}]
             
             # Initial API call
             response = self._call_api(messages)
@@ -61,6 +82,11 @@ class ArxivChatbot:
         except Exception as e:
             error_msg = f"Error processing query: {str(e)}"
             logger.error(error_msg)
+            
+            # Log error for audit
+            if self.audit_logger and config.log_errors:
+                self.audit_logger.log_error("chatbot", "process_query", error_msg)
+            
             print(f"Sorry, I encountered an error: {error_msg}")
             raise ChatbotError(error_msg) from e
     
@@ -77,21 +103,70 @@ class ArxivChatbot:
         Raises:
             APIError: If API call fails
         """
+        start_time = time.time()
+        
         try:
+            # Convert messages to proper format for Anthropic API
+            formatted_messages = []
+            for msg in messages:
+                if isinstance(msg.get("content"), str):
+                    formatted_messages.append({
+                        "role": msg["role"],
+                        "content": msg["content"]
+                    })
+                else:
+                    formatted_messages.append(msg)
+            
             response = self.client.messages.create(
                 max_tokens=config.max_tokens,
                 model=config.model_name,
                 tools=self.tool_executor.tool_schemas,
-                messages=messages
+                messages=formatted_messages
             )
+            
+            duration_ms = (time.time() - start_time) * 1000
+            
+            # Log API call for audit
+            if self.audit_logger and config.log_api_calls:
+                self.audit_logger.log_api_call(
+                    model=config.model_name,
+                    max_tokens=config.max_tokens,
+                    tool_count=len(self.tool_executor.tool_schemas),
+                    message_count=len(messages),
+                    duration_ms=duration_ms,
+                    success=True
+                )
+            
             return response
+            
         except anthropic.APIError as e:
+            duration_ms = (time.time() - start_time) * 1000
             error_msg = f"Anthropic API error: {str(e)}"
             logger.error(error_msg)
+            
+            # Log API error for audit
+            if self.audit_logger and config.log_errors:
+                self.audit_logger.log_api_call(
+                    model=config.model_name,
+                    max_tokens=config.max_tokens,
+                    tool_count=len(self.tool_executor.tool_schemas),
+                    message_count=len(messages),
+                    duration_ms=duration_ms,
+                    success=False,
+                    error_message=error_msg
+                )
+            
             raise APIError(error_msg) from e
+            
         except Exception as e:
+            duration_ms = (time.time() - start_time) * 1000
             error_msg = f"Unexpected API error: {str(e)}"
             logger.error(error_msg)
+            
+            # Log unexpected error for audit
+            if self.audit_logger and config.log_errors:
+                self.audit_logger.log_error("api", "anthropic_call", error_msg)
+            
             raise APIError(error_msg) from e
     
     def _process_response(self, response: Any, messages: List[Dict[str, Any]]) -> None:
@@ -158,13 +233,47 @@ class ArxivChatbot:
         print(f"🔧 Calling tool '{tool_name}' with args: {tool_args}")
         logger.info(f"Executing tool: {tool_name} (ID: {tool_id})")
         
+        start_time = time.time()
+        
         try:
             result = self.tool_executor.execute_tool(tool_name, tool_args)
+            duration_ms = (time.time() - start_time) * 1000
+            
             logger.debug(f"Tool {tool_name} completed successfully")
+            
+            # Log tool execution for audit
+            if self.audit_logger and config.log_tool_executions:
+                self.audit_logger.log_tool_execution(
+                    tool_name=tool_name,
+                    tool_args=tool_args,
+                    duration_ms=duration_ms,
+                    success=True
+                )
+                
+                # Log tool result
+                self.audit_logger.log_tool_result(
+                    tool_name=tool_name,
+                    result_size=len(result),
+                    result_type="text"
+                )
+            
             return result
+            
         except ToolExecutorError as e:
+            duration_ms = (time.time() - start_time) * 1000
             error_msg = f"Tool execution failed: {str(e)}"
             logger.error(error_msg)
+            
+            # Log tool execution error for audit
+            if self.audit_logger and config.log_errors:
+                self.audit_logger.log_tool_execution(
+                    tool_name=tool_name,
+                    tool_args=tool_args,
+                    duration_ms=duration_ms,
+                    success=False,
+                    error_message=error_msg
+                )
+            
             return error_msg
     
     def start_chat_loop(self) -> None:
@@ -178,6 +287,14 @@ class ArxivChatbot:
         print("  - Search for 3 papers on 'quantum computing'")
         print("  - Tell me about paper 2412.07992v3")
         print()
+        
+        # Log session start for audit
+        if self.audit_logger:
+            self.audit_logger.log_security_event(
+                "Chat session started",
+                severity="info",
+                details={"session_type": "interactive_chat"}
+            )
         
         while True:
             try:
@@ -199,5 +316,23 @@ class ArxivChatbot:
                 break
             except Exception as e:
                 logger.error(f"Unexpected error in chat loop: {str(e)}")
+                
+                # Log unexpected error for audit
+                if self.audit_logger and config.log_errors:
+                    self.audit_logger.log_error("chatbot", "chat_loop", str(e))
+                
                 print(f"\n❌ An unexpected error occurred: {str(e)}")
                 print("Please try again or type 'quit' to exit.")
+        
+        # Log session end for audit
+        if self.audit_logger:
+            self.audit_logger.log_security_event(
+                "Chat session ended",
+                severity="info",
+                details={"session_type": "interactive_chat"}
+            )
+    
+    def __del__(self):
+        """Cleanup when the chatbot is destroyed."""
+        if self.audit_logger:
+            cleanup_audit_logger()

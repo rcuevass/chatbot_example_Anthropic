@@ -1,0 +1,48 @@
+{
+  "2505.04847v1": {
+    "title": "Benchmarking LLM Faithfulness in RAG with Evolving Leaderboards",
+    "authors": [
+      "Manveer Singh Tamber",
+      "Forrest Sheng Bao",
+      "Chenyu Xu",
+      "Ge Luo",
+      "Suleman Kazi",
+      "Minseok Bae",
+      "Miaoran Li",
+      "Ofer Mendelevitch",
+      "Renyi Qu",
+      "Jimmy Lin"
+    ],
+    "summary": "Hallucinations remain a persistent challenge for LLMs. RAG aims to reduce\nhallucinations by grounding responses in contexts. However, even when provided\ncontext, LLMs still frequently introduce unsupported information or\ncontradictions. This paper presents our efforts to measure LLM hallucinations\nwith a focus on summarization tasks, assessing how often various LLMs introduce\nhallucinations when summarizing documents. We discuss Vectara's existing LLM\nhallucination leaderboard, based on the Hughes Hallucination Evaluation Model\n(HHEM). While HHEM and Vectara's Hallucination Leaderboard have garnered great\nresearch interest, we examine challenges faced by HHEM and current\nhallucination detection methods by analyzing the effectiveness of these methods\non existing hallucination datasets. To address these limitations, we propose\nFaithJudge, an LLM-as-a-judge approach guided by few-shot human hallucination\nannotations, which substantially improves automated LLM hallucination\nevaluation over current methods. We introduce an enhanced hallucination\nleaderboard centered on FaithJudge, alongside our current hallucination\nleaderboard, enabling more reliable benchmarking of LLMs for hallucinations in\nRAG.",
+    "pdf_url": "http://arxiv.org/pdf/2505.04847v1",
+    "published": "2025-05-07"
+  },
+  "2410.16251v3": {
+    "title": "Can Knowledge Editing Really Correct Hallucinations?",
+    "authors": [
+      "Baixiang Huang",
+      "Canyu Chen",
+      "Xiongxiao Xu",
+      "Ali Payani",
+      "Kai Shu"
+    ],
+    "summary": "Large Language Models (LLMs) suffer from hallucinations, referring to the\nnon-factual information in generated content, despite their superior capacities\nacross tasks. Meanwhile, knowledge editing has been developed as a new popular\nparadigm to correct erroneous factual knowledge encoded in LLMs with the\nadvantage of avoiding retraining from scratch. However, a common issue of\nexisting evaluation datasets for knowledge editing is that they do not ensure\nthat LLMs actually generate hallucinated answers to the evaluation questions\nbefore editing. When LLMs are evaluated on such datasets after being edited by\ndifferent techniques, it is hard to directly adopt the performance to assess\nthe effectiveness of different knowledge editing methods in correcting\nhallucinations. Thus, the fundamental question remains insufficiently\nvalidated: Can knowledge editing really correct hallucinations in LLMs? We\nproposed HalluEditBench to holistically benchmark knowledge editing methods in\ncorrecting real-world hallucinations. First, we rigorously construct a massive\nhallucination dataset with 9 domains, 26 topics and more than 6,000\nhallucinations. Then, we assess the performance of knowledge editing methods in\na holistic way on five dimensions including Efficacy, Generalization,\nPortability, Locality, and Robustness. Through HalluEditBench, we have provided\nnew insights into the potentials and limitations of different knowledge editing\nmethods in correcting hallucinations, which could inspire future improvements\nand facilitate progress in the field of knowledge editing.",
+    "pdf_url": "http://arxiv.org/pdf/2410.16251v3",
+    "published": "2024-10-21"
+  },
+  "2405.18027v1": {
+    "title": "TimeChara: Evaluating Point-in-Time Character Hallucination of Role-Playing Large Language Models",
+    "authors": [
+      "Jaewoo Ahn",
+      "Taehyun Lee",
+      "Junyoung Lim",
+      "Jin-Hwa Kim",
+      "Sangdoo Yun",
+      "Hwaran Lee",
+      "Gunhee Kim"
+    ],
+    "summary": "While Large Language Models (LLMs) can serve as agents to simulate human\nbehaviors (i.e., role-playing agents), we emphasize the importance of\npoint-in-time role-playing. This situates characters at specific moments in the\nnarrative progression for three main reasons: (i) enhancing users' narrative\nimmersion, (ii) avoiding spoilers, and (iii) fostering engagement in fandom\nrole-playing. To accurately represent characters at specific time points,\nagents must avoid character hallucination, where they display knowledge that\ncontradicts their characters' identities and historical timelines. We introduce\nTimeChara, a new benchmark designed to evaluate point-in-time character\nhallucination in role-playing LLMs. Comprising 10,895 instances generated\nthrough an automated pipeline, this benchmark reveals significant hallucination\nissues in current state-of-the-art LLMs (e.g., GPT-4o). To counter this\nchallenge, we propose Narrative-Experts, a method that decomposes the reasoning\nsteps and utilizes narrative experts to reduce point-in-time character\nhallucinations effectively. Still, our findings with TimeChara highlight the\nongoing challenges of point-in-time character hallucination, calling for\nfurther study.",
+    "pdf_url": "http://arxiv.org/pdf/2405.18027v1",
+    "published": "2024-05-28"
+  }
+}

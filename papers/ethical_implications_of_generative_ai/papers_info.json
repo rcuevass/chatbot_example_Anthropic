@@ -1,0 +1,60 @@
+{
+  "2207.14086v1": {
+    "title": "Ever heard of ethical AI? Investigating the salience of ethical AI issues among the German population",
+    "authors": [
+      "Kimon Kieslich",
+      "Marco Lünich",
+      "Pero Došenović"
+    ],
+    "summary": "Building and implementing ethical AI systems that benefit the whole society\nis cost-intensive and a multi-faceted task fraught with potential problems.\nWhile computer science focuses mostly on the technical questions to mitigate\nsocial issues, social science addresses citizens' perceptions to elucidate\nsocial and political demands that influence the societal implementation of AI\nsystems. Thus, in this study, we explore the salience of AI issues in the\npublic with an emphasis on ethical criteria to investigate whether it is likely\nthat ethical AI is actively requested by the population. Between May 2020 and\nApril 2021, we conducted 15 surveys asking the German population about the most\nimportant AI-related issues (total of N=14,988 respondents). Our results show\nthat the majority of respondents were not concerned with AI at all. However, it\ncan be seen that general interest in AI and a higher educational level are\npredictive of some engagement with AI. Among those, who reported having thought\nabout AI, specific applications (e.g., autonomous driving) were by far the most\nmentioned topics. Ethical issues are voiced only by a small subset of citizens\nwith fairness, accountability, and transparency being the least mentioned ones.\nThese have been identified in several ethical guidelines (including the EU\nCommission's proposal) as key elements for the development of ethical AI. The\nsalience of ethical issues affects the behavioral intentions of citizens in the\nway that they 1) tend to avoid AI technology and 2) engage in public\ndiscussions about AI. We conclude that the low level of ethical implications\nmay pose a serious problem for the actual implementation of ethical AI for the\nCommon Good and emphasize that those who are presumably most affected by\nethical issues of AI are especially unaware of ethical risks. Yet, once ethical\nAI is top of the mind, there is some potential for activism.",
+    "pdf_url": "http://arxiv.org/pdf/2207.14086v1",
+    "published": "2022-07-28"
+  },
+  "2502.21248v1": {
+    "title": "Digital Doppelgangers: Ethical and Societal Implications of Pre-Mortem AI Clones",
+    "authors": [
+      "Vijayalaxmi Methuku",
+      "Praveen Kumar Myakala"
+    ],
+    "summary": "The rapid advancement of generative AI has enabled the creation of pre-mortem\ndigital twins, AI-driven replicas that mimic the behavior, personality, and\nknowledge of living individuals. These digital doppelgangers serve various\nfunctions, including enhancing productivity, enabling creative collaboration,\nand preserving personal legacies. However, their development raises critical\nethical, legal, and societal concerns. Issues such as identity fragmentation,\npsychological effects on individuals and their social circles, and the risks of\nunauthorized cloning and data exploitation demand careful examination.\nAdditionally, as these AI clones evolve into more autonomous entities, concerns\nabout consent, ownership, and accountability become increasingly complex.\n  This paper differentiates pre-mortem AI clones from post-mortem generative\nghosts, examining their unique ethical and legal implications. We explore key\nchallenges, including the erosion of personal identity, the implications of AI\nagency, and the regulatory gaps in digital rights and privacy laws. Through a\nresearch-driven approach, we propose a framework for responsible AI governance,\nemphasizing identity preservation, consent mechanisms, and autonomy safeguards.\nBy aligning technological advancements with societal values, this study\ncontributes to the growing discourse on AI ethics and provides policy\nrecommendations for the ethical deployment of pre-mortem AI clones.",
+    "pdf_url": "http://arxiv.org/pdf/2502.21248v1",
+    "published": "2025-02-28"
+  },
+  "2304.10743v3": {
+    "title": "The Ethics of AI-Generated Maps: A Study of DALLE 2 and Implications for Cartography",
+    "authors": [
+      "Yuhao Kang",
+      "Qianheng Zhang",
+      "Robert Roth"
+    ],
+    "summary": "The rapid advancement of artificial intelligence (AI) such as the emergence\nof large language models including ChatGPT and DALLE 2 has brought both\nopportunities for improving productivity and raised ethical concerns. This\npaper investigates the ethics of using artificial intelligence (AI) in\ncartography, with a particular focus on the generation of maps using DALLE 2.\nTo accomplish this, we first create an open-sourced dataset that includes\nsynthetic (AI-generated) and real-world (human-designed) maps at multiple\nscales with a variety settings. We subsequently examine four potential ethical\nconcerns that may arise from the characteristics of DALLE 2 generated maps,\nnamely inaccuracies, misleading information, unanticipated features, and\nreproducibility. We then develop a deep learning-based ethical examination\nsystem that identifies those AI-generated maps. Our research emphasizes the\nimportance of ethical considerations in the development and use of AI\ntechniques in cartography, contributing to the growing body of work on\ntrustworthy maps. We aim to raise public awareness of the potential risks\nassociated with AI-generated maps and support the development of ethical\nguidelines for their future use.",
+    "pdf_url": "http://arxiv.org/pdf/2304.10743v3",
+    "published": "2023-04-21"
+  },
+  "2310.17551v1": {
+    "title": "Unpacking the Ethical Value Alignment in Big Models",
+    "authors": [
+      "Xiaoyuan Yi",
+      "Jing Yao",
+      "Xiting Wang",
+      "Xing Xie"
+    ],
+    "summary": "Big models have greatly advanced AI's ability to understand, generate, and\nmanipulate information and content, enabling numerous applications. However, as\nthese models become increasingly integrated into everyday life, their inherent\nethical values and potential biases pose unforeseen risks to society. This\npaper provides an overview of the risks and challenges associated with big\nmodels, surveys existing AI ethics guidelines, and examines the ethical\nimplications arising from the limitations of these models. Taking a normative\nethics perspective, we propose a reassessment of recent normative guidelines,\nhighlighting the importance of collaborative efforts in academia to establish a\nunified and universal AI ethics framework. Furthermore, we investigate the\nmoral inclinations of current mainstream LLMs using the Moral Foundation\ntheory, analyze existing alignment algorithms, and outline the unique\nchallenges encountered in aligning ethical values within them. To address these\nchallenges, we introduce a novel conceptual paradigm for aligning the ethical\nvalues of big models and discuss promising research directions for alignment\ncriteria, evaluation, and method, representing an initial step towards the\ninterdisciplinary construction of the ethically aligned AI\n  This paper is a modified English version of our Chinese paper\nhttps://crad.ict.ac.cn/cn/article/doi/10.7544/issn1000-1239.202330553, intended\nto help non-Chinese native speakers better understand our work.",
+    "pdf_url": "http://arxiv.org/pdf/2310.17551v1",
+    "published": "2023-10-26"
+  },
+  "2505.00339v1": {
+    "title": "Enhancing AI-Driven Education: Integrating Cognitive Frameworks, Linguistic Feedback Analysis, and Ethical Considerations for Improved Content Generation",
+    "authors": [
+      "Antoun Yaacoub",
+      "Sansiri Tarnpradab",
+      "Phattara Khumprom",
+      "Zainab Assaghir",
+      "Lionel Prevost",
+      "Jérôme Da-Rugna"
+    ],
+    "summary": "Artificial intelligence (AI) is rapidly transforming education, presenting\nunprecedented opportunities for personalized learning and streamlined content\ncreation. However, realizing the full potential of AI in educational settings\nnecessitates careful consideration of the quality, cognitive depth, and ethical\nimplications of AI-generated materials. This paper synthesizes insights from\nfour related studies to propose a comprehensive framework for enhancing\nAI-driven educational tools. We integrate cognitive assessment frameworks\n(Bloom's Taxonomy and SOLO Taxonomy), linguistic analysis of AI-generated\nfeedback, and ethical design principles to guide the development of effective\nand responsible AI tools. We outline a structured three-phase approach\nencompassing cognitive alignment, linguistic feedback integration, and ethical\nsafeguards. The practical application of this framework is demonstrated through\nits integration into OneClickQuiz, an AI-powered Moodle plugin for quiz\ngeneration. This work contributes a comprehensive and actionable guide for\neducators, researchers, and developers aiming to harness AI's potential while\nupholding pedagogical and ethical standards in educational content generation.",
+    "pdf_url": "http://arxiv.org/pdf/2505.00339v1",
+    "published": "2025-05-01"
+  }
+}

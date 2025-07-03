@@ -1,0 +1,50 @@
+{
+  "2001.02098v1": {
+    "title": "An algebraic geometry perspective on topological data analysis",
+    "authors": [
+      "Paul Breiding"
+    ],
+    "summary": "A short survey on applications of algebraic geometry in topological data\nanalysis.",
+    "pdf_url": "http://arxiv.org/pdf/2001.02098v1",
+    "published": "2020-01-06"
+  },
+  "1901.07410v1": {
+    "title": "Ball mapper: a shape summary for topological data analysis",
+    "authors": [
+      "Paweł Dłotko"
+    ],
+    "summary": "Topological data analysis provides a collection of tools to encapsulate and\nsummarize the shape of data. Currently it is mainly restricted to \\emph{mapper\nalgorithm} and \\emph{persistent homology}. In this paper we introduce new\nmapper--inspired descriptor that can be applied for exploratory data analysis.",
+    "pdf_url": "http://arxiv.org/pdf/1901.07410v1",
+    "published": "2019-01-22"
+  },
+  "2406.17045v1": {
+    "title": "Topological Data Analysis via Undergraduate Linear Algebra",
+    "authors": [
+      "Cheyne Glass",
+      "Elizabeth Vidaurre"
+    ],
+    "summary": "Topological Data Analysis has grown in popularity in recent years as a way to\napply tools from algebraic topology to large data sets. One of the main tools\nin topological data analysis is persistent homology. This paper uses\nundergraduate linear algebra to provide explicit methods for, and examples of,\ncomputing persistent (co)homology.",
+    "pdf_url": "http://arxiv.org/pdf/2406.17045v1",
+    "published": "2024-06-24"
+  },
+  "1609.08227v1": {
+    "title": "Topological Data Analysis",
+    "authors": [
+      "Larry Wasserman"
+    ],
+    "summary": "Topological Data Analysis (TDA) can broadly be described as a collection of\ndata analysis methods that find structure in data. This includes: clustering,\nmanifold estimation, nonlinear dimension reduction, mode estimation, ridge\nestimation and persistent homology. This paper reviews some of these methods.",
+    "pdf_url": "http://arxiv.org/pdf/1609.08227v1",
+    "published": "2016-09-27"
+  },
+  "2209.05484v1": {
+    "title": "On the application of topological data analysis: a Z24 Bridge case study",
+    "authors": [
+      "Tristan Gowdridge",
+      "Nikolaos Dervilis",
+      "Keith Worden"
+    ],
+    "summary": "Topological methods are very rarely used in structural health monitoring\n(SHM), or indeed in structural dynamics generally, especially when considering\nthe structure and topology of observed data. Topological methods can provide a\nway of proposing new metrics and methods of scrutinising data, that otherwise\nmay be overlooked. In this work, a method of quantifying the shape of data, via\na topic called topological data analysis will be introduced. The main tool\nwithin topological data analysis is persistent homology. Persistent homology is\na method of quantifying the shape of data over a range of length scales. The\nrequired background and a method of computing persistent homology is briefly\nintroduced here. Ideas from topological data analysis are applied to a Z24\nBridge case study, to scrutinise different data partitions, classified by the\nconditions at which the data were collected. A metric, from topological data\nanalysis, is used to compare between the partitions. The results presented\ndemonstrate that the presence of damage alters the manifold shape more\nsignificantly than the effects present from temperature.",
+    "pdf_url": "http://arxiv.org/pdf/2209.05484v1",
+    "published": "2022-09-12"
+  }
+}
